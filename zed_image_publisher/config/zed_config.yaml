@@ -1,0 +1,35 @@
+zed_camera_node:
+  ros__parameters:
+    # フレームID
+    frame_id: "zed_left_camera_frame"
+    
+    # カメラ設定
+    camera_id: 0  # 使用するZEDカメラのID (0, 1, 2, ...)
+    use_gpu: true  # GPU使用フラグ (true/false)
+    
+    # ビデオ設定
+    fps: 100.0  # フレームレート (15, 30, 60, 100)
+    image_width: 480   # 画像幅
+    image_height: 300   # 画像高さ
+    # 解像度オプション:
+    # - 672x376 (VGA)
+    # - 1280x720 (HD720) 
+    # - 1920x1080 (HD1080)
+    
+    video_quality: 2  # ビデオ品質 (0=HIGH, 1=MEDIUM, 2=LOW, 3=ULTRA, 4=AUTO)
+    
+    # 画像調整パラメータ (0-8の範囲)
+    brightness: 4.0      # 明度
+    contrast: 4.0        # コントラスト  
+    hue: 0.0            # 色相
+    saturation: 4.0      # 彩度
+    sharpness: 4.0       # シャープネス
+    gamma: 8.0          # ガンマ
+    
+    # 露出設定
+    auto_exposure: true  # 自動露出 (true/false)
+    exposure: 100       # 手動露出値 (auto_exposure=falseの場合)
+    
+    # ホワイトバランス設定
+    auto_whitebalance: true        # 自動ホワイトバランス (true/false)
+    whitebalance_temperature: 4200  # 色温度 (auto_whitebalance=falseの場合, 2800-6500K)
